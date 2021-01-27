@@ -2114,7 +2114,7 @@ pre code {
   border: 0;
 }
 
-.form-control {
+.control {
   display: block;
   width: 100%;
   height: calc(1.6em + 0.75rem + 2px);
@@ -10944,3 +10944,30 @@ a.text-dark:focus {
   }
 }
 
+/*!追加分*/
+/* Form Layout */
+.form-wrapper {
+  background: #fafafa;
+  margin: 3em auto;
+  padding: 0 1em;
+  max-width: 370px;
+}
+
+.button {
+  background: #f16272;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.button:hover {
+  background: #ee3e52;
+}
