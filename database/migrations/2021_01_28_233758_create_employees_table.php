@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmlpoyeesTable extends Migration
+class CreateEmployeesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateEmlpoyeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('emlpoyees', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('employee_id');
+            $table->integer('employee_id');
             $table->string('employee_name');
-            $table->string('goods');
+            $table->string('office');
+            //$table->string('goods_id');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateEmlpoyeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emlpoyees');
+        Schema::dropIfExists('employees');
     }
 }

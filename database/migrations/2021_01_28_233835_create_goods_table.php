@@ -16,6 +16,7 @@ class CreateGoodsTable extends Migration
         Schema::create('goods', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('employee_id');
+            //$table->integer('employee_name');
             $table->string('uniform');
             $table->string('winter_clothes');
             $table->string('shoes');
@@ -25,6 +26,7 @@ class CreateGoodsTable extends Migration
 
             $table->foreign('employee_id')->references('id')->on('empoloyees')->onDelete('cascade');
         });
+
     }
 
     /**
