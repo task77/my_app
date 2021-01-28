@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes();
 
-Route::get('/index', 'HomeController@index')->name('index');
+Route::get('index', 'HomeController@index')->name('index');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('goods', 'GoodsController', ['only' => ['create', 'store', 'destroy']]);
+    Route::resource('index', 'EmployeesController', ['only' => ['index']]);
+});
+
+//Route::resource('employee','EmployeesController',['only'=>['index']]);
+//Route::get('employee','EmployeesController@index')->name('index');
