@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-<div class="form-wrapper">
-  <h3> 新規登録</h3>
+<div class="login-container">
+  <h3> 管理者登録</h3>
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -61,7 +61,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('新規登録する') }}
                                 </button>
                             </div>
                         </div>

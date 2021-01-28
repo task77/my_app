@@ -10946,12 +10946,6 @@ a.text-dark:focus {
 
 /*!追加分*/
 /* Form Layout */
-.form-wrapper {
-  background: #fafafa;
-  margin: 3em auto;
-  padding: 0 1em;
-  max-width: 370px;
-}
 
 .button {
   background: #f16272;

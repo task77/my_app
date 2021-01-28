@@ -21,14 +21,4 @@
       </tr>
     </tbody>
 
-    <tbody>
-    @foreach($employees as $employee)
-      <tr>
-        <td scope="row">{{ $employee->employee_id }}</td>
-        <td scope="row">{{ $employee->employee_name }}</td>
-      </tr>
-    @endforeach
-    </tbody>
-  </table>
-
 @endsection
