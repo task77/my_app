@@ -6,17 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateGoodsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('employee_id');
-            //$table->integer('employee_name');
+            $table->unsignedBigInteger('employee_id');
             $table->string('uniform');
             $table->string('winter_clothes');
             $table->string('shoes');
@@ -24,16 +18,11 @@ class CreateGoodsTable extends Migration
             $table->string('memo');
             $table->timestamps();
 
-            $table->foreign('employee_id')->references('id')->on('empoloyees')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
         });
 
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('goods');
