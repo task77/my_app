@@ -14,8 +14,8 @@ class CreateGoodsTable extends Migration
             $table->string('uniform');
             $table->string('winter_clothes');
             $table->string('shoes');
-            $table->string('other');
-            $table->string('memo');
+            $table->string('other')->nullable()->change();
+            $table->string('memo')->nullable()->change();
             $table->timestamps();
 
             $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
