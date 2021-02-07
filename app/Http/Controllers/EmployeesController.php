@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Employee;
+use App\Goods;
 
 class EmployeesController extends Controller
 
 {
     public function index()
     {
-        $employees = Employee::orderBy('id','desc')->get();
-        
+        //$employees = Employee::all(); //orderBy('id','desc')->get();
+        $employees = Employee::with('goods')->get();
         return view('index', ['employees' => $employees,
         ]);
     }
@@ -35,7 +36,16 @@ class EmployeesController extends Controller
         $employee->employee_name = $request->input('employee_name');
         $employee->office = $request->input('office');
         $employee->save();
+
+        $goods = new Goods;
+        $goods->uniform = $request->input('uniform');
+        $goods->winter_clothes = $request->input('winter_clothes');
+        $goods->shoes = $request->input('shoes');
+        $goods->other = $request->input('other');
+        $goods->memo = $request->input('memo');
+        $goods->employee_id = $employee->id;
+        $goods->save();
         
-        return redirect(route('employee_create.index'))->with('flash_message','新規登録しました');
+        return redirect(route('employee_create.index'))->with('flash_message','社員を登録しました');
     }
 }
