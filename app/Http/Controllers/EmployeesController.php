@@ -28,7 +28,10 @@ class EmployeesController extends Controller
         $request->validate([
             'employee_id' => 'required|min:6|max:6',
             'employee_name' => 'required',
-            'office' => 'required',
+            'uniform' => 'required',
+            'winter_clothes' => 'required',
+            'shoes' => 'required',
+            'other' => 'required',
         ]);
 
         $employee = new Employee;
@@ -47,5 +50,12 @@ class EmployeesController extends Controller
         $goods->save();
         
         return redirect(route('employee_create.index'))->with('flash_message','社員を登録しました');
+    }
+
+    public function show($id)
+    {
+        $employee = Employee::find($id);
+        $goods = Goods::find($id);
+        return view('employee_show',compact('employee'));
     }
 }
