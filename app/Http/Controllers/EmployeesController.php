@@ -56,6 +56,38 @@ class EmployeesController extends Controller
     {
         $employee = Employee::find($id);
         $goods = Goods::find($id);
-        return view('employee_show',compact('employee'));
+        return view('employee_show', compact('employee'));
+    }
+
+    public function edit($id)
+    {
+        $employee = Employee::find($id);
+        $goods = Goods::find($id);
+        return view('employee_edit', compact('employee'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $employee = Employee::find($id);
+        $goods = Goods::find($id);
+
+        $employee->office = $request->office;
+        $employee->save();
+        $goods->uniform = $request->uniform;
+        $goods->winter_clothes = $request->winter_clothes;
+        $goods->shoes = $request->shoes;
+        $goods->other = $request->other;
+        $goods->memo = $request->memo;
+        $goods->save();
+
+        return view('employee_show', compact('employee'));
+    }
+
+    public function destroy($id)
+    {
+        $employee = Employee::find($id);
+        //$goods = Goods::find($id);
+        $employee -> delete();
+        return redirect()->route('index.index');
     }
 }

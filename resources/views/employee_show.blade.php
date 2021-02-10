@@ -14,6 +14,13 @@
         <h4>登録日：{{ $goods->created_at }}</h4>
         @endforeach
     </ul>
+    <a href="{{ route('employee_create.edit',$employee->id) }}" class="btn btn-primary">社員情報を編集する</a>
+
+    <form method="POST" action="{{ route('employee_create.destroy', $employee->id) }}"> 
+        @csrf
+        @method('DELETE')
+        <input type='submit' value='社員情報を削除する' class="btn btn-danger" onclick='return confirm("本当に削除してよろしいですか？？");'>
+    </form>
     </div>
 </div>
 @endsection
