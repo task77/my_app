@@ -27,9 +27,9 @@
                             <option value="">所属事業所を選択してください</option>
                             <option value="新潟営業所">新潟営業所</option>
                             <option value="長岡営業所">長岡営業所</option>
-                            <option value="長岡営業所">上越営業所</option>
-                            <option value="長岡営業所">群馬営業所</option>
-                            <option value="長岡営業所">長野営業所</option>
+                            <option value="上越営業所">上越営業所</option>
+                            <option value="群馬営業所">群馬営業所</option>
+                            <option value="長野営業所">長野営業所</option>
                             </select>
                         </div>
                 </div>
