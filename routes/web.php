@@ -18,7 +18,8 @@ Auth::routes();
 Route::get('index', 'HomeController@index')->name('index');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('goods', 'GoodsController', ['only' => ['create', 'store', 'destroy']]);
     Route::resource('index', 'EmployeesController', ['only' => ['index']]);
-    Route::resource('employee_create', 'EmployeesController', ['only' => ['index', 'create','store']]);
+    Route::resource('employee_create', 'EmployeesController');
+    //Route::resource('employee_create', 'EmployeesController', ['only' => ['index', 'create','store','show','edit','update','destroy']]);
+    //Route::resource('goods', 'GoodsController', ['only' => ['create', 'store', 'destroy']]);
 });
