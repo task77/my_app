@@ -30,22 +30,12 @@
 <body>
     @include('commons.header')
 
-    <!-- フラッシュメッセージ -->
-    <div class="container">
+    <!-- flash_massage -->
     @if (session('flash_message'))
-        <div class="flash_message bg-success text-center py-3 my-0">
-            {{ session('flash_message') }}
-        </div>
-    @endif
+    <div class="flash_message bg-success text-center py-3 my-0">
+        {{ session('flash_message') }}
     </div>
-
-    <!-- <script>
-            @if (session('flash_message'))
-                $(function () {
-                        toastr.success('{{ session('flash_message') }}');
-                });
-            @endif
-    </script> -->
+    @endif
 
     <div class="container">
         @include('commons.error_messages')

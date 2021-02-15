@@ -1,8 +1,8 @@
 <header class="py-4">
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-light mt-3 mb-3">
+    <nav class="navbar navbar-expand-md navbar-dark mt-3 mb-3" style="background-color:#58BA9D">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name','カンリー') }}
+            <i class="fab fa-pagelines"></i> {{ config('app.name', '') }}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
