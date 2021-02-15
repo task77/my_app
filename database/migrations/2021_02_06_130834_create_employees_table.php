@@ -16,7 +16,6 @@ class CreateEmployeesTable extends Migration
             $table->timestamps();
         });
     }
-
     public function down()
     {
         Schema::dropIfExists('employees');
