@@ -12,13 +12,15 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">所属事業所</label>
                         <div class="col-md-6">
-                            <select name="office" class="form-control" value="{{ $employee->office }}">
-                            <option value="">所属事業所を選択してください</option>
-                            <option value="新潟営業所">新潟営業所</option>
-                            <option value="長岡営業所">長岡営業所</option>
-                            <option value="上越営業所">上越営業所</option>
-                            <option value="群馬営業所">群馬営業所</option>
-                            <option value="長野営業所">長野営業所</option>
+                            <select name="office" class="form-control">
+                                <option value='disabled' style='display:none'></option>
+                                @foreach(['新潟営業所', '新発田営業所', '長岡営業所', '上越営業所', '群馬営業所', '長野営業所'] as $office)
+                                    <option
+                                        @if ($employee->office === $office)
+                                            selected
+                                        @endif
+                                    >{{ $office }}</option>
+                                @endforeach
                             </select>
                         </div>
                 </div>
@@ -26,52 +28,45 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">制服</label>
                         <div class="col-md-6">
-
-
-                            <select name="uniform" class="form-control" value="{{ $goods->uniform }}">
-                            <option value="{{ $goods->id }}" 
-                                    @if ($goods->uniform == $goods) 
-                                        selected
-                                    @endif
-                                >{{ $goods->uniform }}</option>
-
-
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
+                            <select name="uniform" class="form-control">
+                                <option value='disabled' style='display:none'></option>
+                                @foreach(['S', 'M', 'L', 'XL'] as $size)
+                                    <option
+                                        @if ($goods->uniform === $size)
+                                            selected
+                                        @endif
+                                    >{{ $size }}</option>
+                                @endforeach
                             </select>
                         </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">防寒着</label>
                         <div class="col-md-6">
-                            <select name="winter_clothes" class="form-control" value="{{ $goods->winter_clothes }}">
-                            <option value="">防寒着のサイズを選択してください</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
+                            <select name="winter_clothes" class="form-control">
+                                <option value='disabled' style='display:none'></option>
+                                @foreach(['S', 'M', 'L', 'XL'] as $size)
+                                    <option
+                                        @if ($goods->winter_clothes === $size)
+                                            selected
+                                        @endif
+                                    >{{ $size }}</option>
+                                @endforeach
                             </select>
                         </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">靴</label>
                         <div class="col-md-6">
-                            <select name="shoes" class="form-control" value="{{ $goods->shoes }}">
-                            <option value="">靴のサイズを選択してください</option>
-                            <option value="23㎝">23㎝</option>
-                            <option value="23.5㎝">23.5㎝</option>
-                            <option value="24㎝">24㎝</option>
-                            <option value="24.5㎝">24.5㎝</option>
-                            <option value="25㎝">25㎝</option>
-                            <option value="25.5㎝">25.5㎝</option>
-                            <option value="26㎝">26㎝</option>
-                            <option value="26.5㎝">26.5㎝</option>
-                            <option value="27㎝">27㎝</option>
-                            <option value="27.5㎝">27.5㎝</option>
-                            <option value="28㎝">28㎝</option>
-                            <option value="28.5㎝">28.5㎝</option>
+                            <select name="shoes" class="form-control">
+                                <option value='disabled' style='display:none'></option>
+                                @foreach(['23㎝', '23.5㎝', '24㎝', '24.5㎝', '25㎝', '25.5㎝', '26㎝', '26.5㎝', '27㎝', '27.5㎝', '28㎝', '28.5㎝'] as $size)
+                                    <option
+                                        @if ($goods->shoes === $size)
+                                            selected
+                                        @endif
+                                    >{{ $size }}</option>
+                                @endforeach
                             </select>
                         </div>
                 </div>
