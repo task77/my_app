@@ -145,6 +145,14 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'employee_id' => '社員番号',
+        'employee_name' => '社員の名前',
+        'office' => '所属事業所',
+        'uniform' => '制服',
+        'winter_clothes' => '防寒着',
+        'shoes' => '靴',
+        'other' => 'その他',
+    ],
 
 ];

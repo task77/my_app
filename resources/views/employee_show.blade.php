@@ -11,16 +11,18 @@
         <h4>　靴　：{{ $goods->shoes }}</h4>
         <h4>その他：{{ $goods->other }}</h4>
         <h4>メ　モ：{{ $goods->memo }}</h4>
-        <h4>登録日：{{ $goods->created_at }}</h4>
+        <h4>社員登録日：{{ $employee->created_at->format('Y/m/d') }}</h4>
+        <h4>詳細更新日：{{ $employee->updated_at->format('Y/m/d') }}</h4>
         @endforeach
     </ul>
-    <a href="{{ route('employee_create.edit',$employee->id) }}" class="btn btn-primary">社員情報を編集する</a>
 
-    <form method="POST" action="{{ route('employee_create.destroy', $employee->id) }}"> 
+    <a href="{{ route('employee_create.edit',$employee->id) }}" class="btn btn-primary">社員情報を編集する</a>
+    <form method="POST" action="{{ route('employee_create.destroy', $employee->id) }}" sytle="display: inline"> 
         @csrf
         @method('DELETE')
         <input type='submit' value='社員情報を削除する' class="btn btn-danger" onclick='return confirm("本当に削除してよろしいですか？？");'>
-    </form>
+        </form>
+    <a href="{{ route('employee_create.index') }}" class="btn btn-secondary">トップへ戻る</a>
     </div>
 </div>
 @endsection

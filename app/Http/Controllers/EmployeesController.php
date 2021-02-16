@@ -11,7 +11,6 @@ class EmployeesController extends Controller
 {
     public function index()
     {
-        //$employees = Employee::all(); //orderBy('id','desc')->get();
         $employees = Employee::with('goods')->get();
         return view('index', ['employees' => $employees,
         ]);
@@ -26,12 +25,12 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'employee_id' => 'required|min:6|max:6',
+            'employee_id' => 'required',
             'employee_name' => 'required',
+            'office' => 'required',
             'uniform' => 'required',
             'winter_clothes' => 'required',
             'shoes' => 'required',
-            'other' => 'required',
         ]);
 
         $employee = new Employee;
@@ -55,24 +54,22 @@ class EmployeesController extends Controller
     public function show($id)
     {
         $employee = Employee::find($id);
-        $goods = Goods::find($id);
         return view('employee_show', compact('employee'));
     }
 
     public function edit($id)
     {
         $employee = Employee::find($id);
-        $goods = Goods::find($id);
         return view('employee_edit', compact('employee'));
     }
 
     public function update(Request $request, $id)
     {
         $employee = Employee::find($id);
-        $goods = Goods::find($id);
-
         $employee->office = $request->office;
         $employee->save();
+
+        $goods = $employee->goods()->latest()->first();
         $goods->uniform = $request->uniform;
         $goods->winter_clothes = $request->winter_clothes;
         $goods->shoes = $request->shoes;
@@ -80,14 +77,14 @@ class EmployeesController extends Controller
         $goods->memo = $request->memo;
         $goods->save();
 
-        return view('employee_show', compact('employee'));
+        //return view('employee_show', compact('employee'))->with('flash_message','社員情報を更新しました')
+        return redirect(route('employee_create.index'))->with('flash_message','社員情報を更新しました');
     }
 
     public function destroy($id)
     {
         $employee = Employee::find($id);
-        //$goods = Goods::find($id);
         $employee -> delete();
-        return redirect()->route('index.index');
+        return redirect(route('employee_create.index'))->with('flash_message','社員情報を削除しました');
     }
 }
