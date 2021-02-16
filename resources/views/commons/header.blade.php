@@ -2,7 +2,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark mt-3 mb-3" style="background-color:#58BA9D">
             <a class="navbar-brand" href="{{ url('/') }}">
-            <i class="fab fa-pagelines"></i> {{ config('app.name', '') }}
+            <i class="fab fa-pagelines"></i> MANAGE
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
