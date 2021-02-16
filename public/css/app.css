@@ -2759,21 +2759,21 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #38c172;
-  border-color: #38c172;
+  background-color: #FF99FF		;
+  border-color: #FF99FF;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #2fa360;
-  border-color: #2d995b;
+  background-color: #58BA9D;
+  border-color: #58BA9D;
 }
 
 .btn-success:focus,
 .btn-success.focus {
   color: #fff;
-  background-color: #2fa360;
-  border-color: #2d995b;
+  background-color: #58BA9D;
+  border-color: #58BA9D;
   box-shadow: 0 0 0 0.2rem rgba(86, 202, 135, 0.5);
 }
 
@@ -10945,7 +10945,6 @@ a.text-dark:focus {
 }
 
 /*!追加分*/
-/* Form Layout */
 
 .button {
   background: #f16272;
@@ -10967,6 +10966,10 @@ a.text-dark:focus {
 }
 
 .vertical-middle{
-  display: table-cell; /* 子要素はテーブルセル要素にする */
-  vertical-align: middle; /* 上下中央に寄せる */ 
+  display: table-cell;
+  vertical-align: middle;
 }
+
+a:hover {
+  text-decoration: none;
+  }
