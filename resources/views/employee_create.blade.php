@@ -11,13 +11,13 @@
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">社員番号</label>
                         <div class="col-md-6">
-                            <input type="text" name="employee_id" class="form-control" value="{{old('employee_id')}}" placeholder="社員番号を入力してください">
+                            <input type="tel" name="employee_id" class="form-control" value="{{old('employee_id')}}" placeholder="社員番号を入力してください">
                         </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">名前</label>
                         <div class="col-md-6">
-                            <input type="tel" name="employee_name" class="form-control" value="{{old('employee_name')}}" placeholder="名前を入力してください">
+                            <input type="text" name="employee_name" class="form-control" value="{{old('employee_name')}}" placeholder="名前を入力してください">
                         </div>
                 </div>
                 <div class="form-group row">
