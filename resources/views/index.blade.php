@@ -7,7 +7,8 @@
         <th scope="col">社員番号</th>
         <th scope="col">名前</th>
         <th scope="col">所属事業所</th>
-        <th scope="col" colspan="4">貸与品</th>
+        <th scope="col" colspan="4" class="d-none d-sm-table-cell">貸与品</th>
+        <th></th>
       </tr>
     </thead>
 
@@ -17,7 +18,7 @@
         <td class="align-middle" scope="row">{{ $employee->employee_id }}</td>
         <td class="align-middle" scope="row">{{ $employee->employee_name }}</td>
         <td class="align-middle" scope="row">{{ $employee->office }}</td>
-        <td class="align-middle">
+        <td class="d-none d-sm-table-cell">
           @foreach($employee->goods as $goods)
             <p class="vertical-middle">制服：{{ $goods->uniform }}｜防寒着：{{ $goods->winter_clothes }}｜靴：{{ $goods->shoes }}｜その他：{{ $goods->other }}</p>
           @endforeach
