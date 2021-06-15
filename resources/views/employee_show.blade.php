@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     <div class="login-container">
-    <h3>{{ $employee->employee_name }}（{{ $employee->employee_id }}）{{ $employee->office }}</h3>
+    <h3>{{ $employee->employee_name }}（{{ $employee->employee_id }}）</h3>
+    <h3>{{ $employee->office }}</h3>
         <ul>
             @foreach($employee->goods as $goods)
             <h4>制　服：{{ $goods->uniform }}</h4>
