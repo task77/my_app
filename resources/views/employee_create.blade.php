@@ -5,7 +5,7 @@
     <div class="login-container">
     <h3>新規社員登録</h3>
         <div class="card-body">
-            <form method="POST" action="{{ route('employee_create.store') }}"> 
+            <form method="POST" action="{{ route('employee_create.store') }}" enctype="multipart/form-data"> 
                 @csrf
 
                 <div class="form-group row">
@@ -31,6 +31,12 @@
                             <option value="群馬営業所">群馬営業所</option>
                             <option value="長野営業所">長野営業所</option>
                             </select>
+                        </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-4 col-form-label text-md-right">画像</label>
+                        <div class="col-md-6">
+                            <input type="file" name="employee_image" class="form-control" value="{{old('employee_image')}}" placeholder="画像を挿入してください">
                         </div>
                 </div>
                 <div class="form-group row">
