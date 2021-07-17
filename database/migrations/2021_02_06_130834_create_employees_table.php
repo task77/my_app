@@ -13,6 +13,7 @@ class CreateEmployeesTable extends Migration
             $table->unsignedBigInteger('employee_id');
             $table->string('employee_name');
             $table->string('office');
+            $table->string('employee_image')->nullable();
             $table->timestamps();
         });
     }
