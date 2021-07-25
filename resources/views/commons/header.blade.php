@@ -4,6 +4,17 @@
         <a class="navbar-brand" href="{{ url('/') }}">
         <i class="fab fa-pagelines"></i> MANAGE
         </a>
+
+        <form action="{{ route('employee.search') }}" method="POST">
+        @csrf
+            <div class="input-group rounded">
+                <input type="search" class="form-control rounded" placeholder="社員検索" name="search" aria-label="Search" aria-describedby="search-addon" />
+                    <button class="btn btn-info" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+            </div>
+        </form>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>

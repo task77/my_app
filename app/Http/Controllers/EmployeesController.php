@@ -25,6 +25,7 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'employee_image' => 'required',
             'employee_id' => 'required',
             'employee_name' => 'required',
             'office' => 'required',
@@ -37,6 +38,8 @@ class EmployeesController extends Controller
         $employee->employee_id = $request->input('employee_id');
         $employee->employee_name = $request->input('employee_name');
         $employee->office = $request->input('office');
+        $employee->employee_image = $request->file('employee_image')->store('public'); //保存先はstorage/public
+
         $employee->save();
 
         $goods = new Goods;
@@ -77,7 +80,6 @@ class EmployeesController extends Controller
         $goods->memo = $request->memo;
         $goods->save();
 
-        //return view('employee_show', compact('employee'))->with('flash_message','社員情報を更新しました')
         return redirect(route('employee_create.index'))->with('flash_message','社員情報を更新しました');
     }
 
@@ -86,5 +88,19 @@ class EmployeesController extends Controller
         $employee = Employee::find($id);
         $employee -> delete();
         return redirect(route('employee_create.index'))->with('flash_message','社員情報を削除しました');
+    }
+    public function search(Request $request)
+    {
+        $employee = Employee::where('employee_name', 'like', "%{$request->search}%")
+                            ->orWhere('office', 'like', "%{$request->search}%")
+                            ->paginate(3);
+
+                    $search_result = $request->search.'の検索結果は'.$employee->total().'件です';
+
+                    return view('index', [
+                        'employees' => $employee,
+                        'search_result' => $search_result,
+                        'search_query' => $request->search
+                    ]);
     }
 }
