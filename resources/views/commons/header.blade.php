@@ -5,7 +5,7 @@
         <i class="fab fa-pagelines"></i> MANAGE
         </a>
 
-        <form action="{{ route('employee.search') }}" method="POST">
+        <form action="{{ route('employee.search') }}" method="get">
         @csrf
             <div class="input-group rounded">
                 <input type="search" class="form-control rounded" placeholder="社員検索" name="search" aria-label="Search" aria-describedby="search-addon" />
