@@ -11,7 +11,7 @@ class EmployeesController extends Controller
 {
     public function index()
     {
-        $employees = Employee::with('goods')->get();
+        $employees = Employee::with('goods')->paginate(10);
         return view('index', ['employees' => $employees,
         ]);
     }
@@ -95,12 +95,12 @@ class EmployeesController extends Controller
                             ->orWhere('office', 'like', "%{$request->search}%")
                             ->paginate(3);
 
-                    $search_result = $request->search.'の検索結果は'.$employee->total().'件です';
+        $search_result = $request->search.'の検索結果は'.$employee->total().'件です';
 
-                    return view('index', [
-                        'employees' => $employee,
-                        'search_result' => $search_result,
-                        'search_query' => $request->search
+        return view('index', [
+                    'employees' => $employee,
+                    'search_result' => $search_result,
+                    'search_query' => $request->search
                     ]);
     }
 }

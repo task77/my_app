@@ -27,9 +27,16 @@
 <body>
     @include('commons.header')
 
+    <!-- search -->
     @isset($search_result)
         <h5 style="padding: 15px;">{{ $search_result }}</h5>
     @endisset
+
+    @if(isset($employee_name))
+        {{ $employees->appends(['employee_name' => $employee_name])->links() }}
+    @elseif(isset($office))
+        {{ $employees->appends(['office' => $office])->links() }}
+    @endif
 
     <!-- flash_massage -->
     @if (session('flash_message'))
