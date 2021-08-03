@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Employee;
 use App\Goods;
+use Illuminate\Support\Facades\Storage;
 
 class EmployeesController extends Controller
 
@@ -38,7 +39,11 @@ class EmployeesController extends Controller
         $employee->employee_id = $request->input('employee_id');
         $employee->employee_name = $request->input('employee_name');
         $employee->office = $request->input('office');
-        $employee->employee_image = $request->file('employee_image')->store('public'); //保存先はstorage/public
+        $image = $request->file('employee_image');
+        $path = Storage::disk('public')->putFile('image', $image);
+        $imagePath = 'storage/' . $path;
+        $employee->employee_image = $imagePath;
+        // $employee->employee_image = $request->file('employee_image')->store('public'); //保存先はstorage/public
 
         $employee->save();
 
@@ -50,7 +55,7 @@ class EmployeesController extends Controller
         $goods->memo = $request->input('memo');
         $goods->employee_id = $employee->id;
         $goods->save();
-        
+
         return redirect(route('employee_create.index'))->with('flash_message','社員を登録しました');
     }
 
