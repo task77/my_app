@@ -17,7 +17,7 @@
     @foreach($employees as $employee)
       <tr>
         <td class="align-middle" scope="row">{{ $employee->employee_id }}</td>
-        <td><img src=" {{ asset('storage/s') }} " alt="画像" class="rounded-circle" width="50" height="50"></td>
+        <td><img src=" {{ asset($employee->employee_image) }} " alt="画像" class="rounded-circle" width="50" height="50"></td>
         <td class="align-middle" scope="row">{{ $employee->employee_name }}</td>
         <td class="align-middle" scope="row">{{ $employee->office }}</td>
         @foreach($employee->goods as $goods)
