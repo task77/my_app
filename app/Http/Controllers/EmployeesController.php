@@ -69,12 +69,14 @@ class EmployeesController extends Controller
     {
         $employee = Employee::find($id);
         return view('employee_edit', compact('employee'));
+        //上記と同じ ('employee_edit', ['employee' => $employee]);
     }
 
     public function update(Request $request, $id)
     {
         $employee = Employee::find($id);
         $employee->office = $request->office;
+        $employee->employee_image = $request->employee_image;
         $employee->save();
 
         $goods = $employee->goods()->latest()->first();

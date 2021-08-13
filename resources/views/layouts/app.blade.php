@@ -24,19 +24,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
     @include('commons.header')
-
-    <!-- search -->
-    @isset($search_result)
-        <h5 style="padding: 15px;">{{ $search_result }}</h5>
-    @endisset
-
-    @if(isset($employee_name))
-        {{ $employees->appends(['employee_name' => $employee_name])->links() }}
-    @elseif(isset($office))
-        {{ $employees->appends(['office' => $office])->links() }}
-    @endif
 
     <!-- flash_massage -->
     @if (session('flash_message'))
