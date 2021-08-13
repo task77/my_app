@@ -2,16 +2,16 @@
 
 @section('content')
 
-    <!-- search -->
-    @isset($search_result)
-        <h5 style="padding: 15px;">{{ $search_result }}</h5>
-    @endisset
+  <!-- search -->
+  @isset($search_result)
+      <h5 style="padding: 15px;">{{ $search_result }}</h5>
+  @endisset
 
-    @if(isset($employee_name))
-        {{ $employee->appends(['employee_name' => $employee_name])->links() }}
-    @elseif(isset($office))
-        {{ $employee->appends(['office' => $office])->links() }}
-    @endif
+  @if(isset($employee_name))
+      {{ $employee->appends(['employee_name' => $employee_name])->links() }}
+  @elseif(isset($office))
+      {{ $employee->appends(['office' => $office])->links() }}
+  @endif
 
   <table class="table table-hover">
     <thead class="thead-dark">

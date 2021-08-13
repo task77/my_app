@@ -43,7 +43,6 @@ class EmployeesController extends Controller
         $path = Storage::disk('public')->putFile('image', $image);
         $imagePath = 'storage/' . $path;
         $employee->employee_image = $imagePath;
-        // $employee->employee_image = $request->file('employee_image')->store('public'); //保存先はstorage/public
 
         $employee->save();
 
@@ -69,7 +68,6 @@ class EmployeesController extends Controller
     {
         $employee = Employee::find($id);
         return view('employee_edit', compact('employee'));
-        //上記と同じ ('employee_edit', ['employee' => $employee]);
     }
 
     public function update(Request $request, $id)

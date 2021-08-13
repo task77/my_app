@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="login-container">
-    <h3>新規社員登録</h3>
+        <h3>新規社員登録</h3>
         <div class="card-body">
             <form method="POST" action="{{ route('employee_create.store') }}" enctype="multipart/form-data"> 
                 @csrf
