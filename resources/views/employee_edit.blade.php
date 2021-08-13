@@ -2,8 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="login-container">
+    <div class="mx-auto" style="width: 350px;">
+    <img src=" {{ asset($employee->employee_image) }} "alt="画像" class="rounded-circle" width="150" height="150">
     <h3>{{ $employee->employee_name }}（{{ $employee->employee_id }}）</h3>
+</div>
+    <div class="login-container">
         <div class="card-body">
             <form method="POST" action="{{ route('employee_create.update', $employee->id) }}"> 
                 @csrf

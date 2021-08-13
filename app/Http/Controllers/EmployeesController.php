@@ -74,7 +74,6 @@ class EmployeesController extends Controller
     {
         $employee = Employee::find($id);
         $employee->office = $request->office;
-        $employee->employee_image = $request->employee_image;
         $employee->save();
 
         $goods = $employee->goods()->latest()->first();
