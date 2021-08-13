@@ -19,7 +19,7 @@
         <th scope="col">社員番号</th>
         <th scope="col">写真</th>
         <th scope="col">名前</th>
-        <th scope="col">所属事業所</th>
+        <th scope="col" class="d-none d-sm-table-cell">所属事業所</th>
         <th scope="col" class="d-none d-sm-table-cell">貸与品</th>
         <th scope="col"></th>
       </tr>
@@ -31,7 +31,7 @@
         <td class="align-middle" scope="row">{{ $employee->employee_id }}</td>
         <td><img src=" {{ asset($employee->employee_image) }} " alt="画像" class="rounded-circle" width="50" height="50"></td>
         <td class="align-middle" scope="row">{{ $employee->employee_name }}</td>
-        <td class="align-middle" scope="row">{{ $employee->office }}</td>
+        <td class="d-none d-sm-table-cell">{{ $employee->office }}</td>
         @foreach($employee->goods as $goods)
         <td class="d-none d-sm-table-cell">
           制　服：{{ $goods->uniform }}｜防寒着：{{ $goods->winter_clothes }}｜靴：{{ $goods->shoes }}｜その他：{{ $goods->other }}</td>
