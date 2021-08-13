@@ -55,7 +55,7 @@ class EmployeesController extends Controller
         $goods->employee_id = $employee->id;
         $goods->save();
 
-        return redirect(route('employee_create.index'))->with('flash_message','社員を登録しました');
+        return redirect(route('employee_create.index'))->with('flash_message','社員情報を登録しました');
     }
 
     public function show($id)
