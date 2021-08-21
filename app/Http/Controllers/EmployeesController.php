@@ -40,9 +40,9 @@ class EmployeesController extends Controller
         $employee->employee_name = $request->input('employee_name');
         $employee->office = $request->input('office');
         $image = $request->file('employee_image');
-        $path = Storage::disk('public')->putFile('image', $image);
-        $imagePath = 'storage/' . $path;
-        $employee->employee_image = $imagePath;
+        $path = Storage::disk('s3')->putFile('/image', $image, 'public');
+        $employee->employee_image = Storage::disk('s3')->url($path);
+        $image->save();
 
         $employee->save();
 
