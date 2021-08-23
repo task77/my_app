@@ -1,4 +1,4 @@
-![MANAGE TOP](https://github.com/task77/my_app/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-08-16%209.09.46.png)
+![MANAGE TOP](https://github.com/task77/my_app/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202021-08-15%2022.49.45.png)
 
 ## :four_leaf_clover: 制作過程 :four_leaf_clover:
 サービスの概要は社員情報及び貸与品を管理するための<span style="color: blue; ">「社員情報管理システムアプリ」</span>です。  
