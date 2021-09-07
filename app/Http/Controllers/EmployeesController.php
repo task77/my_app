@@ -42,7 +42,6 @@ class EmployeesController extends Controller
         $image = $request->file('employee_image');
         $path = Storage::disk('s3')->putFile('/image', $image, 'public');
         $employee->employee_image = Storage::disk('s3')->url($path);
-        $image->save();
 
         $employee->save();
 
