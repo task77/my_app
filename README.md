@@ -1,3 +1,5 @@
+![MANAGE TOP](https://gyazo.com/57e42b3c0641120fc5cdd655227e41c9)
+
 ![MANAGE TOP](https://github.com/task77/my_app/blob/master/readme_image1.png)
 
 ## :four_leaf_clover: 制作過程 :four_leaf_clover:
