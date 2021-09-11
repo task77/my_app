@@ -1,3 +1,5 @@
+![sample](https://user-images.githubusercontent.com/66563022/132962488-118dece9-d1b7-4511-a17d-9ee23dfdbfc3.jpg)
+
 ![MANAGE TOP](https://gyazo.com/57e42b3c0641120fc5cdd655227e41c9)
 
 ![MANAGE TOP](https://github.com/task77/my_app/blob/master/readme_image1.png)
