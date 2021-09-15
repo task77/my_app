@@ -1,5 +1,4 @@
-
-![MANAGE TOP](https://github.com/task77/my_app/blob/master/readme_image1.png)
+(<img width="1035" alt="トップ" src="https://user-images.githubusercontent.com/66563022/133506606-c0d3c3da-d00c-4a9f-aa77-af4b00d44f4a.png">)
 
 ## :four_leaf_clover: 制作過程 :four_leaf_clover:
 サービスの概要は社員情報及び貸与品を管理するための<span style="color: blue; ">「社員情報管理システムアプリ」</span>です。  
@@ -41,26 +40,26 @@
 ## :four_leaf_clover: 何ができるか？ :four_leaf_clover:
 ### 1. 管理者登録
  - 管理者登録することにより、社員登録及び編集が可能となります。
-![管理者登録](https://github.com/task77/my_app/blob/master/readme_image2.png)
+(<img width="767" alt="管理者登録" src="https://user-images.githubusercontent.com/66563022/133506682-09ebd62f-ea88-4922-a827-7a3d1f92ed44.png">)
 ***
 
 ### 2. 社員情報登録
  - 入社した社員の情報及び貸与品が登録できます。
-![社員情報登録](https://github.com/task77/my_app/blob/master/readme_image3.png)
+(<img width="614" alt="社員登録" src="https://user-images.githubusercontent.com/66563022/133506863-3cdd8477-ce7a-4ed0-a1b5-9aebabf35dc5.png">)
 ***
 
 ### 3. 社員情報詳細(編集・削除)
  - 登録済み社員の詳細確認、社員登録の編集や削除ができます。
-![社員情報詳細(編集・削除)](https://github.com/task77/my_app/blob/master/readme_image4.png)
+(<img width="768" alt="社員登録編集削除" src="https://user-images.githubusercontent.com/66563022/133506985-537b8089-198c-411c-bacf-92f3724e9480.png">)
 ***
 
 ### 4. 社員検索
  - 登録済み社員の「名前」や「事業所名」から曖昧検索ができます。
-![社員検索](https://github.com/task77/my_app/blob/master/readme_image5.gif)
+(![検索機能](https://user-images.githubusercontent.com/66563022/133507368-9de37b5c-9d24-4293-8d7f-9ae3b3279fa8.gif))
 ***
 
 ### 5. レスポンシブ対応
  - Bootstrap を活用したのでスマートフォンからでも使用可能です。 
  - デバイスによってハンバーガーメニューを実装できます。 
 
-![レスポンシブ](https://github.com/task77/my_app/blob/master/readme_image6.gif)　
+(![レスポンシブ](https://user-images.githubusercontent.com/66563022/133507436-fbcc672f-e280-4a3b-ba66-0b4a383be705.gif))　
