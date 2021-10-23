@@ -1,6 +1,6 @@
 <img width="1035" alt="トップ" src="https://user-images.githubusercontent.com/66563022/133506606-c0d3c3da-d00c-4a9f-aa77-af4b00d44f4a.png">
 
-## :four_leaf_clover: 制作過程 :four_leaf_clover:
+## :four_leaf_clover: 制作背景 :four_leaf_clover:
 サービスの概要は社員情報及び貸与品を管理するための<span style="color: blue; ">「社員情報管理システムアプリ」</span>です。  
 現職では社員の情報や会社から貸与している制服や靴などの情報が全て紙で管理させており、登録や変更する際に手間が掛かること、また管理態勢や事務処理の効率化を図るためにWEB上で管理できるようサービスを制作しました。
  
