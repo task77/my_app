@@ -1,6 +1,6 @@
 <img width="1035" alt="トップ" src="https://user-images.githubusercontent.com/66563022/133506606-c0d3c3da-d00c-4a9f-aa77-af4b00d44f4a.png">
 
-## :four_leaf_clover: 制作過程 :four_leaf_clover:
+## :four_leaf_clover: 制作背景 :four_leaf_clover:
 サービスの概要は社員情報及び貸与品を管理するための<span style="color: blue; ">「社員情報管理システムアプリ」</span>です。  
 現職では社員の情報や会社から貸与している制服や靴などの情報が全て紙で管理させており、登録や変更する際に手間が掛かること、また管理態勢や事務処理の効率化を図るためにWEB上で管理できるようサービスを制作しました。
  
@@ -41,23 +41,23 @@
 ### 1. 管理者登録
  - 管理者登録することにより、社員登録及び編集が可能となります。
 <img width="767" alt="管理者登録" src="https://user-images.githubusercontent.com/66563022/133506682-09ebd62f-ea88-4922-a827-7a3d1f92ed44.png">
-***
+
 
 ### 2. 社員情報登録
  - 入社した社員の情報及び貸与品が登録できます。
 <img width="613" alt="社員登録①" src="https://user-images.githubusercontent.com/66563022/133511915-ea87ae8e-cde9-4af7-bcc8-00706b6b72d1.png">
 <img width="614" alt="社員登録②" src="https://user-images.githubusercontent.com/66563022/133511990-72ed6598-b4db-44ec-afc8-c1fd7439db9f.png">
-***
+
 
 ### 3. 社員情報詳細(編集・削除)
  - 登録済み社員の詳細確認、社員登録の編集や削除ができます。
 <img width="768" alt="社員登録編集削除" src="https://user-images.githubusercontent.com/66563022/133506985-537b8089-198c-411c-bacf-92f3724e9480.png">
-***
+
 
 ### 4. 社員検索
  - 登録済み社員の「名前」や「事業所名」から曖昧検索ができます。
 ![検索機能](https://user-images.githubusercontent.com/66563022/133507368-9de37b5c-9d24-4293-8d7f-9ae3b3279fa8.gif)
-***
+
 
 ### 5. レスポンシブ対応
  - Bootstrap を活用したのでスマートフォンからでも使用可能です。 
